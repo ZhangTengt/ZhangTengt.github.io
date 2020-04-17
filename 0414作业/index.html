@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/animate.css">
+</head>
+
+<body>
+    <header>
+        <h2><a href="#">那里·国际家居</a></h2>
+        <ul>
+            <li class="head">
+                <a href="#">首页</a>
+                <ul class="head_list">
+                    <li>Home Pagr</li>
+                </ul>
+            </li>
+            <li class="head">
+                <a href="#">关于我们</a>
+                <ul class="head_list">
+                    <li>About Us</li>
+                </ul>
+            </li>
+            <li class="head">
+                <a href="#">新闻资讯</a>
+                <ul class="head_list">
+                    <li>Furniture info</li>
+                </ul>
+            </li>
+            <li class="head">
+                <a href="#">精品案例</a>
+                <ul class="head_list">
+                    <li>Customer case</li>
+                </ul>
+            </li>
+            <li class="head">
+                <a href="#">那里系列</a>
+                <ul class="head_list">
+                    <li>Our Product</li>
+                </ul>
+            </li>
+            <li class="head">
+                <a href="#">招商加盟</a>
+                <ul class="head_list">
+                    <li>Join us</li>
+                </ul>
+            </li>
+            <li class="head">
+                <a href="#">联系我们</a>
+                <ul class="head_list">
+                    <li>Contact Us</li>
+                </ul>
+            </li>
+        </ul>
+    </header>
+    <div class="banner">
+        <img src="http://www.nalijiaju.com.cn/d/file/p/2019/01-07/68e6053278d99916f744e3c602e025e7.jpg" alt="">
+        <img src="http://www.nalijiaju.com.cn/d/file/p/2019/01-07/0860d93989b4ea24c910e31cb5a070f4.jpg" alt="">
+        <div class="banner_btn">
+            <span id="prev" href="">
+                < </span>
+                    <span id="next" href="">></span>
+        </div>
+        <!-- billboard广告牌 -->
+        <div id="billboard">
+            <h3>精品时尚现代风格设计</h3>
+            <p>什么叫做 &nbsp;"&nbsp;舒适与轻奢&nbsp;"</p>
+        </div>
+    </div>
+    <!-- 头部幻灯片 -->
+    <section class="jianju">
+        <div class="container">
+            <h1><i>No.1</i>&nbsp;&nbsp;我们的特色</h1>
+            <div class="container_box">
+                <div class="container_list">  
+                    <h2>
+                        人体工程学<br>
+                        <small>Erqonomics</small>
+                    </h2>
+                    <p>符合人体工程学完美契合身体</p>
+                </div>
+            </div>
+           
+        </div>
+       
+            
+      
+    </section>
+
+
+</body>
+<script type="text/javascript">
+    var imgs = document.getElementsByTagName("img");
+    var next = document.getElementById("next");
+    var billboard = document.getElementById("billboard")
+    var billboard_title = document.getElementsByClassName("billboard_title")
+    var billboard_content = document.getElementsByClassName("billboard_content")
+
+    var x = 0;
+    imgs[x].style.opacity = 1;
+
+    setInterval(() => {
+        imgs[x].style.opacity = 0;
+        x++;
+        if (x > imgs.length - 1) {
+            x = 0;
+        }
+        imgs[x].style.opacity = 1;
+        myAnimate();
+    }, 5000);
+
+    next.onclick = function () {
+        imgs[x].style.opacity = 0;
+        x++;
+        if (x > imgs.length - 1) {
+            x = 0;
+        }
+        imgs[x].style.opacity = 1;
+        myAnimate();
+    }
+    prev.onclick = function () {
+        imgs[x].style.opacity = 0;
+        x--;
+        if (x < 0) {
+            x = imgs.length - 1;
+        }
+        imgs[x].style.opacity = 1;
+        myAnimate();
+    }
+    function myAnimate() {
+        billboard.classList.add("animated", "bounceInLeft");
+        setTimeout(() => {
+            billboard.classList.remove("animated", "bounceInLeft");
+        }, 1000);
+    }
+
+
+</script>
+
+</html>
