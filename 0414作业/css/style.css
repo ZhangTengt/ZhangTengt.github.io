@@ -14,7 +14,7 @@ header{
     top: -4px;
     z-index: 10;
 }
-a{
+a,.head a{
     text-decoration: none;
     color: white;
 }
@@ -29,9 +29,7 @@ ul{
     font-family: 微软雅黑;
     font-size: 14px;
 }
-.head a{
-    color: white;
-}
+
 .head_list{
     color: white;
     background-color: rgb(22, 22, 22);
@@ -45,7 +43,6 @@ display: block;
 .banner{
     width: 1520px;
     height: 580px;
-    border: 1px solid;
     position: relative;
 }
 .banner img{
@@ -66,18 +63,19 @@ right: 195px;
 display: flex;
 justify-content: space-between;
 }
-.banner_btn span{
+
+.banner_btn span,.serve_banner_btn span{
     color: rgb(212, 212, 212);
     width: 45px;
     height: 40px;
     line-height: 40px;
     text-align: center;
-    display: block;
+    display: inline-block;
     font-size: 25px;
     border: 2px solid rgb(212, 212, 212);
-  transition: all .5s;
+    transition: all .5s;
 }
-.banner_btn span:hover{
+.banner_btn span:hover,.serve_banner_btn span:hover{
     cursor: pointer;
     color: rgb(247, 247, 247);
     border: 2px solid rgb(247, 247, 247);
@@ -102,41 +100,521 @@ justify-content: space-between;
 .jianju{
     margin-top: 50px;
 }
-.container{
+
+
+
+.container,.product_box,.original_intention_box,.serve_box{
     width: 1140px;
+    height: 334px;
     margin: 0 auto;
 }
-.container h1{
+
+.container h1,.product_box h1,.original_intention_box h1,.serve_box h1
+,.case h1,.about-us_box h1,.message_box h1{ 
     text-align: center;
     padding-bottom: 20px;
     margin-bottom: 40px;
     border-bottom: 1px solid #e5e5e5;
     font-family: 微软雅黑;
+    font-weight: 500;
 }
 .container_box{
     display: flex;
+    padding: 30px 0 50px 0;
 }
 .container_list {
     width: 262px;
     height: 130px;
-    border: 1px solid;
+    margin-right: 30px;
 }
 .container_list h2{
-    
     width: 187px;
     height: 63px;
     padding: 0 0 6px 75px;
-    background-image: url(http://www.nalijiaju.com.cn/skin/nalijiaju/style/images/s-web.png);
     background-repeat: no-repeat;
 }
+.container_list:nth-child(1) h2{
+    background-image: url(http://www.nalijiaju.com.cn/skin/nalijiaju/style/images/s-web.png);
+}
+.container_list:nth-child(2) h2{
+    background-image: url(http://www.nalijiaju.com.cn/skin/nalijiaju/style/images/s-yy.png);
+}
+.container_list:nth-child(3) h2{
+    background-image: url(http://www.nalijiaju.com.cn/skin/nalijiaju/style/images/s-yx.png);
+}
+.container_list:nth-child(4) h2{
+    background-image: url(http://www.nalijiaju.com.cn/skin/nalijiaju/style/images/s-pp.png);
+}
+
 .container_list small{
-    font-size: 65%;
+    font-size: 50%;
     font-weight: 400;
     font-family: 微软雅黑;
+    color: #999999;
 }
 .container_list p{
     font-size: 14px;
-    color: #999;;
+    color: #999;
+    line-height: 50px;
+}
+.product{
+    width: 1520px;
+    height: 334px;
+    padding: 60px 0 50px 0;
+    background-image: url(http://www.nalijiaju.com.cn/skin/nalijiaju/style/images/bg-1.jpg);
 }
 
+.product_box>h1{
+    color: white;
+    border-bottom: 1px solid rgb(87, 83, 83);
+}
+.product_content,.original_intention_content{
+    display: flex;
+}
+.product_list,.product_list span{
+    width: 292px;
+    height: 234px;
+    transition: all .5s;
+}
+.product_list{
+    position: relative;
+}
+.product_list img{
+    width:  262px;
+    height: 187px;
+}
+.product_list h4{
+    text-align: center;
+    margin: 10px 0;
+    font-size: 18px;
+    font-family: 微软雅黑;
+    font-weight: 400;
+}
+.product_list_bg{
+    background-color: rgb(46, 44, 44);
+}
+.product_list .fa-link{
+    width: 44px;
+    height: 44px;
+    text-align: center;
+    position: absolute;
+    top: 72px;
+    left: 105px;
+    font-size: 30px;
+    opacity: 0;
+}
+.original_intention{
+    width: 1520px;
+    height: 275px;
+    padding: 60px 0 30px 0;
+    background-image: url(http://www.nalijiaju.com.cn/skin/nalijiaju/style/images/bg-2.gif);
+}
+.original_intention_content{
+    justify-content: space-around;
+}
+.original_intention_list{
+    width: 136px;
+    height: 136px;
+    border-radius: 50%;
+    border: 2px solid #69afde;
+    border-right: 2px solid #1ad280;
+    border-bottom: 2px solid #1ad280;
+    transition: all 1s;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    line-height: 30px;
+    font-size: 14px;color: gray;
+}
+/* .original_intention_list添加背景动画 */
+.original_intention_list_bg{
+    transform: rotate(360deg);
+}
+.serve{
+    width: 1520px;
+    height: 595px;
+    padding: 60px 0 50px 0;
+   background-image: url(http://www.nalijiaju.com.cn/skin/nalijiaju/style/images/bg-6.jpg);
+}
+.serve_box{
+    position: relative;
+}
+.serve_box h1{
+    color: white;
+    border-bottom: 1px solid #504f4f;
+}
+.serve_banner_list{
+    width: 1140px;
+    height: 416px;
+    text-align: center;
+    color: white;
+    position: absolute;
+    opacity: 0;
+    transition: all .5s;
+}
+.serve_banner_list h2{
+    font-family: 微软雅黑;
+    font-weight: 400;
+    margin: 40px 0 10px 0;
+}
+.serve_banner_list p{
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+.serve_banner_btn span{
+    color: rgb(150, 145, 145);
+    border: 2px solid rgb(150, 145, 145);
+}
+.serve_banner_btn{
+    width: 110px;
+    height: 40px;
+    position: absolute;
+    bottom: -255px;
+    right: 520px;
+    display: flex;
+    justify-content: space-between;
+}
+.case{
+    padding: 60px 0 50px 0;
+}
+.case_content{
+    width: 1170px;
+    height: 686px;
+    margin: 0 auto;
+}
+.case_box{
+    width: 1170px;
+    display: flex;
+    flex-wrap: wrap;
+}
+.case_list{
+    width: 255px;
+    height: 255px;
+    padding: 0 15px;
+    text-align: center;
+    transition: all .5s;
+    position: relative;
+    
+}
+.case_list .fa-link{
+    position: absolute;
+    top: 63px;
+    left: 103px;
+    color: #eeeeee;
+    opacity: 0;
+}
+.case_list a{
+    color: #3d3331;
+    transition: all .5s;
+}
+.case_list a:hover{
+ color: #6699cc;
+}
+.case_list img{
+    width: 255px;
+}
+.case_list h4{
+    padding: 20px 0 26px 0;
+    font-weight: 600;
+}
+.case_list h4 a i{
+    font-weight: bold;
+    font-family: 微软雅黑;
+}
+.more{
+    width: 180px;
+    height: 47px;
+    margin: 0 auto;
+    border: solid 1px;
+    text-align: center;
+    border: 2px solid #3d3331;
+}
+
+.more a{
+    display: inline-block;
+    width: 180px;
+    height: 47px;
+    line-height: 47px;
+    color: black;
+    font-size: 14px;font-family: 微软雅黑;
+    font-weight: 400;
+    transition: all .5s;
+}
+.more:hover a{
+    color: white;
+    background-color:#3d3331;
+}
+.about-us{
+    width: 1520px;
+    height: 170px;
+    padding: 60px 0 50px 0;
+    background-image: url(http://www.nalijiaju.com.cn/skin/nalijiaju/style/images/about-bg.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-color: #302b28;
+}
+.about-us_box{
+    width: 1170px;
+    height: 170px;
+    margin: 0 auto;
+}
+.about-us_box h1{
+    color: #ffffff;
+    border-bottom: 1px solid rgba(255,255,255,0.2);
+}
+.about-us_box p{
+    color: rgba(255,255,255,0.70);
+    text-indent: 2em;
+}
+.message{
+    width: 1520px;
+    
+}
+.message_box{
+    width: 1170px;
+    height: 625px;
+    margin: 60px auto;
+}
+.message_content{
+    display: flex;
+    flex-wrap: wrap;
+}
+.message_list{
+    width: 555px;
+    height: 224px;
+    margin: 0 15px;
+    display: flex;
+    justify-content: space-around;
+    position: relative;
+}
+
+.message_list_left{
+    width: 200px;
+    height: 127px;
+    opacity: 1;
+}
+
+.message_list img{
+    width: 200px;
+   height: 127px;
+}
+.message_list h4{
+    line-height: 1.5;
+    font-size: 16px;
+    font-weight: 600;
+}
+.message_list p{
+    line-height: 30px;
+    font-size: 14px;
+    color: #666666;
+}
+.message_list_right{
+    width: 320px;
+}
+.message_list_right img{
+    width: 20px;
+    height: 10px;
+    transform: translateX(10px);
+}
+.message_list_right a{
+    color: #504f4f;
+    transition: all .5s;
+}
+.message_list_right a:hover{
+    color: #69c;
+}
+.shade{
+    display: inline-block;
+    width: 200px;
+    height: 127px;
+    line-height: 127px;
+    background-color: rgba(139, 130, 130, 0.685);
+    text-align: center;
+    position: absolute;
+    color: #eeeeee;
+    opacity: 0;
+}
+
+.message_icon{
+    position: absolute;
+    bottom: 30px;
+    left: 25px;
+    
+}
+.message_icon span{
+    display: inline-block;
+    width: 40px;
+    height: 18px;
+    text-align: center;
+    vertical-align: middle;
+}
+.message_icon a{
+    color: black;
+    font-size: 14px;
+    transition: all .5s;
+}
+.message_icon a:hover{
+    color: #69c;
+}
+.message_icon i{
+    color: red;
+    font-size: 14px;
+}
+.fl{
+    background-image: url(http://www.nalijiaju.com.cn/skin/nalijiaju/style/images/ny-news-bg.png);
+    background-repeat: no-repeat;
+    background-position:  center 1px;
+}
+.gz{
+    background-image: url(http://www.nalijiaju.com.cn/skin/nalijiaju/style/images/ny-news-bg.png);
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+.sj{
+    background-image: url(http://www.nalijiaju.com.cn/skin/nalijiaju/style/images/ny-news-bg.png);
+    background-repeat: no-repeat;
+    background-position: center -43px;
+}
+.footer{
+    width: 1520px;
+    height: 410px;
+    background-image: url(http://www.nalijiaju.com.cn/skin/nalijiaju/style/images/bg-8.png);
+}
+.footer_list{
+    display: flex;
+}
+.footer_box{
+    width: 1140px;height: 410px;
+    margin: 0 auto;
+}
+.footer_left{
+    display: flex;
+}
+.d_1{
+width: 319px;
+height: 280px;
+}
+.d_1 h4{
+padding: 20px 0 10px 0;
+font-weight: 700;
+font-family: 微软雅黑;
+}
+.d_1 input,button{
+    width: 243px;
+    height: 38px;
+   margin-bottom: 15px;
+}
+.d_1 button{
+    width: 244px;
+    border: none;
+    background-color: #302b28;
+    color: #ffffff;
+    transition: all .5s;
+}
+.d_1 button:hover{
+    background-color: #69c;
+}
+.d_2{
+width: 500px;
+height: 225px;
+padding: 10px 0;
+}
+.d_2 h4{
+padding: 10px 0 10px 0;
+font-weight: 700;
+font-family: 微软雅黑;
+}
+.d_2 li{
+font-family: 微软雅黑;
+line-height: 30px;
+color: #919399;
+}
+.d_2 li a{
+    color: #919399;
+    transition: all .5s;
+}
+.d_2 li a:hover{
+    color: #fff;
+}
+.d_2 li:nth-child(1){
+font-size: 12px;
+}
+.d_2 li:nth-child(2){
+font-size: 14px;
+font-weight: bold;
+}
+.d_2 li:nth-child(3){
+font-size: 13px;
+font-weight: bold;
+}
+.d_2 li:nth-child(4){
+font-size: 13px;
+font-weight: bold;
+}
+.d_2 span{
+    display: inline-block;
+    width: 25px;
+    height: 25px;
+    vertical-align: middle;
+}
+.logo_1{
+    background-image: url(http://www.nalijiaju.com.cn/skin/nalijiaju/style/images/address-bg.png);
+    background-repeat: no-repeat;
+    background-position: center 0;
+    background-size: cover;
+}
+.logo_2{
+    background-image: url(http://www.nalijiaju.com.cn/skin/nalijiaju/style/images/address-bg.png);
+    background-repeat: no-repeat;
+    background-position: center -25px;
+    background-size: cover;
+}
+.logo_3{
+    background-image: url(http://www.nalijiaju.com.cn/skin/nalijiaju/style/images/address-bg.png);
+    background-repeat: no-repeat;
+    background-position: center -50px;
+    background-size: cover;
+}
+.logo_4{
+    background-image: url(http://www.nalijiaju.com.cn/skin/nalijiaju/style/images/address-bg.png);
+    background-repeat: no-repeat;
+    background-position: center -75px;
+    background-size: cover;
+}
+.footer_right{
+    width: 320px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+.footer_right img{
+width: 118px;
+height: 118px;
+}
+.footer_code span{
+    text-align: center;
+    display: block;
+    color: #919399;
+}
+.copy{
+    width: 1140px;
+    height: 30px;
+    padding-top: 30px;
+    border-top: 1px solid gray;
+}
+.copy p{
+    line-height: 30px;
+    font-size: 12px;
+    color: #919399;
+    font-family: 微软雅黑;
+}
+.copy p a{
+    color: #919399;
+    transition: all .5s;
+}
+.copy p a:hover{
+    color: #fff;
+}
 
