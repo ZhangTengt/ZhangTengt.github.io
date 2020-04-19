@@ -414,134 +414,32 @@
             </div>
             <!-- 备案号copy -->
             <div class="copy">
-                <p>Copyright © 2007-2019 那里家居 京ICP备19009601号&nbsp;&nbsp;<a href="#">鲁班园家具生产</a>&nbsp;&nbsp;&nbsp;<a href="#">家具生产</a></p>
+                <p>Copyright © 2007-2019 那里家居 京ICP备19009601号&nbsp;&nbsp;<a href="#">鲁班园家具生产</a>&nbsp;&nbsp;&nbsp;<a
+                        href="#">家具生产</a></p>
             </div>
-            
         </div>
     </section>
+    <!-- 侧边选项卡tab -->
+    <section class="tab">
+        <ul id="tab_box">
+            <li>
+                <img src="http://www.nalijiaju.com.cn/skin/nalijiaju/style/images/side_icon01.png" alt="">
+                <a href="#">产品系列</a>
+            </li>
+            <li>
+                <img src="http://www.nalijiaju.com.cn/skin/nalijiaju/style/images/side_icon02.png" alt="">
+                <a href="#">客户案例</a>
+            </li>
+            <li>
+                <img src="http://www.nalijiaju.com.cn/skin/nalijiaju/style/images/side_icon04.png" alt="">
+                <a href="#">QQ客服</a>
+            </li>
+            <li id="last">
+                <img src="http://www.nalijiaju.com.cn/skin/nalijiaju/style/images/side_icon05.png" alt="">
+            </li>
+        </ul>
+    </section>
 </body>
-<script type="text/javascript">
- var imgs = document.getElementsByClassName("banner_img");
-    var next = document.getElementById("next");
-    var billboard = document.getElementById("billboard")
-    var billboard_title = document.getElementsByClassName("billboard_title")
-    var billboard_content = document.getElementsByClassName("billboard_content")
-    var product_list = document.getElementsByClassName("product_list")
-    var fa_link = document.getElementsByClassName("fa-link")
-    var original_intention_list = document.getElementsByClassName("original_intention_list")
-    var serve_banner_list = document.getElementsByClassName("serve_banner_list")
-    var serve_prev = document.getElementById("serve_prev")
-    var serve_next = document.getElementById("serve_next")
-    var case_list_bg = document.getElementsByClassName("case_list_bg")
-    var message_list = document.getElementsByClassName("message_list")
-    var message_list_left = document.getElementsByClassName("message_list_left")
-    var shade = document.getElementsByClassName("shade")
-    var bg = document.getElementsByClassName("bg")
-
-    var x = 0;
-    imgs[x].style.opacity = 1;
-
-    serve_banner_list[x].style.opacity = 1;
-    setInterval(() => {
-        imgs[x].style.opacity = 0;
-        x++;
-        if (x > imgs.length - 1) {
-            x = 0;
-        }
-        imgs[x].style.opacity = 1;
-        myAnimate();
-    }, 5000);
-
-    next.onclick = function () {
-        imgs[x].style.opacity = 0;
-        x++;
-        if (x > imgs.length - 1) {
-            x = 0;
-        }
-        imgs[x].style.opacity = 1;
-        myAnimate();
-    }
-    prev.onclick = function () {
-        imgs[x].style.opacity = 0;
-        x--;
-        if (x < 0) {
-            x = imgs.length - 1;
-        }
-        imgs[x].style.opacity = 1;
-        myAnimate();
-    }
-    function myAnimate() {
-        billboard.classList.add("animated", "bounceInLeft");
-        setTimeout(() => {
-            billboard.classList.remove("animated", "bounceInLeft");
-        }, 1000);
-    }
-
-    for (let i = 0; i < product_list.length; i++) {
-        product_list[i].style.opacity = 1;
-        product_list[i].index = i;
-        product_list[i].onmouseover = function () {
-            product_list[i].classList.add("product_list_bg");
-            product_list[i].style.opacity = .6;
-            fa_link[this.index].style.opacity = .6;
-        }
-        product_list[i].onmouseout = function () {
-            product_list[i].classList.remove("product_list_bg");
-            product_list[i].style.opacity = 1;
-            fa_link[this.index].style.opacity = 0;
-        }
-    }
-    for (let i = 0; i < original_intention_list.length; i++) {
-
-        original_intention_list[i].index = i + 1;
-        original_intention_list[i].onmouseover = function () {
-            original_intention_list[i].style.backgroundImage = "url(" + "http://www.nalijiaju.com.cn/skin/nalijiaju/style/images/o" + this.index + ".png" + ")"
-            original_intention_list[i].classList.add("original_intention_list_bg")
-        }
-        original_intention_list[i].onmouseout = function () {
-            original_intention_list[i].style.backgroundImage = ""
-            original_intention_list[i].classList.remove("original_intention_list_bg")
-        }
-    }
-
-    serve_next.onclick = function () {
-        serve_banner_list[x].style.opacity = 0;
-        x++;
-        if (x > serve_banner_list.length - 1) {
-            x = 0;
-        }
-        serve_banner_list[x].style.opacity = 1;
-    }
-    serve_prev.onclick = function () {
-        serve_banner_list[x].style.opacity = 0;
-        x--;
-        if (x < 0) {
-            x = serve_banner_list.length - 1;
-        }
-        serve_banner_list[x].style.opacity = 1;
-    }
-
-    for (let i = 0; i < case_list_bg.length; i++) {
-        case_list_bg[i].index = i;
-        case_list_bg[i].onmouseover = function () {
-            case_list_bg[i].style.opacity = .7;
-        }
-        case_list_bg[i].onmouseout = function () {
-            case_list_bg[i].style.opacity = 1;
-        }
-    }
-
-    for (let i = 0; i < message_list_left.length; i++) {
-        message_list_left[i].onmouseover = function () {
-            message_list_left[i].style.opacity = .7;
-            shade[i].style.opacity = .7;
-        }
-        message_list_left[i].onmouseout = function () {
-            message_list_left[i].style.opacity = 1;
-            shade[i].style.opacity = 0;
-        }
-    }   
-
-</script>
+<script src="js/style.js"></script>
 
 </html>

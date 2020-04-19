@@ -7,13 +7,14 @@ header{
     height: 46px;
     line-height: 46px;
     margin: 30px 0;
-    /* border: 1px solid; */
     display: flex;
     justify-content: space-around;
     position: fixed;
     top: -4px;
     z-index: 10;
+    transition: all .5s;
 }
+
 a,.head a{
     text-decoration: none;
     color: white;
@@ -24,7 +25,6 @@ ul{
 .head{
     width: 81px;
     float: left;
-    /* border: 1px solid; */
     text-align: center;
     font-family: 微软雅黑;
     font-size: 14px;
@@ -38,7 +38,7 @@ ul{
     display: none;
 }
 .head:hover .head_list{
-display: block;
+    display: block;
 }
 .banner{
     width: 1520px;
@@ -100,8 +100,6 @@ justify-content: space-between;
 .jianju{
     margin-top: 50px;
 }
-
-
 
 .container,.product_box,.original_intention_box,.serve_box{
     width: 1140px;
@@ -616,5 +614,25 @@ height: 118px;
 }
 .copy p a:hover{
     color: #fff;
+}
+.tab ul{
+    position: fixed;
+    top: 320px;
+    right: -95px;
+}
+.tab li{ 
+width: 150px;
+height: 54px;
+background-color: rgba(0, 0, 0, 0.801);
+display: flex;
+transition: all .5s;
+}
+.tab li a{
+    display: inline-block;
+    width: 100%;
+    height: 54px;
+    line-height: 54px;
+    color: white;
+    text-align: center;
 }
 
