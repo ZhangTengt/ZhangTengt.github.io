@@ -1,0 +1,116 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+.reg_box{
+    width: 1520px;
+    background-color: #eeeeee;
+    padding: 20px 0;
+}
+form{
+    width: 800px;
+    height: 450px;
+    line-height: 80px;
+    margin: 0 auto;
+    background-color: #ffffff;
+    text-align: center;
+    padding-top: 30px;
+}
+form .inp{
+    width: 300px;
+    height: 42px;
+    text-indent: 1em;
+    border-radius: 3px;
+    border: 1px solid #cccccc;
+}
+form span,form a{
+   font-size: 14px;
+}
+form a{
+    color: red;
+}
+form a:hover{
+    color: red;
+}
+.reg_btn{
+    width: 180px;
+    height: 42px;
+}
+.reg_foot{
+    width: 1520px;
+    height: 210px; 
+    background-color: #1b1b1b;
+}
+.reg_fot_box{
+    width: 1200px;
+    height: 191px;
+    margin: 0 auto;
+    padding: 12px 0 8px 0;
+   text-align: center;
+   font-size: 14px;
+   color: #aaaaaa;
+   line-height: 40px;
+}
+.reg_fot_box a{
+    color: #aaaaaa;
+}
+.reg_fot_box li{
+    display: inline-block;
+    margin-left: 10px;
+}
+.reg_fot_box li::after{
+  content: "";
+  border-left: 2px solid #aaaaaa;
+    margin-left: 10px;
+}
+.reg_fot_box li a{
+    color: #aaaaaa;
+    opacity: .6;
+}
+.reg_fot_box li a:hover{
+    opacity: 1;
+}
+.reg_fot_box p{
+    font-size: 13px;
+    font-family: 微软雅黑;
+}
+.reg_fot_box p a:hover{
+    color: #eeeeee;
+}
+/* http://u.qihuiwang.com/images/login/sprite_global.png */
+.reg_fot_box span{
+    display: inline-block;
+    width: 100px;
+    height: 31px;
+    background-image: url(http://u.qihuiwang.com/images/login/copyright.png);
+    background-repeat: no-repeat;
+    opacity: .5;
+}
+.reg_fot_box span:hover{
+    opacity: 1;
+}
+.reg_fot_box .r_1{
+    width: 88px;
+    background-position: 0px 0;
+}
+.reg_fot_box .r_2{
+    width: 87px;
+    background-position: -91px 0;
+}
+.reg_fot_box .r_3{
+    width: 87px;
+    background-position: -183px 0;
+}
+.reg_fot_box .r_4{
+    width: 107px;
+    background-position: -271px 0;
+}
+.reg_fot_box .r_5{
+    width: 88px;
+    background-position: -384px 0;
+}
+.reg_fot_box .r_6{
+    background-position: -476px 0;
+}
+

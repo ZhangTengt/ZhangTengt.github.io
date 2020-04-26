@@ -135,6 +135,7 @@ for (let i = 0; i < tab_box.children.length; i++) {
 }
 last.onmouseover = function () {
     this.style.transform = "translateX(" + 0 + "px)"
+    this.style.backgroundColor = "red"
 }
 
 window.onscroll = function () {

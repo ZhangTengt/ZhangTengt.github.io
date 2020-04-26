@@ -1,0 +1,211 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+.head{
+    width: 1520px;
+    height: 80px;
+    padding: 30px 0 20px 0;
+}
+.head_box{
+    width: 1200px;
+    margin: 0 auto;
+    padding: 0;
+}
+.head_left{
+    display: flex;
+    justify-content: space-around;
+}
+.head_box a{
+    display: inline-block;
+    width: 208px;
+    height: 80px;
+}
+.head_box a img{
+    width: 100%;
+    height: 100%;
+}
+.head_left h4{
+    height: 80px;
+    width: 100px;
+    line-height: 80px;
+    text-align: center;
+}
+.head_right{
+    width: 170px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.head_right p{
+    font-size: 20px;
+}
+#box_a{
+    color: black;
+}
+#box_a:hover{
+    color: black;
+}
+.box{
+    width: 1520px;
+    height: 580px;
+    background-image: url(http://image.qihuiwang.com/A8/4/742/A8E4E4EE6678AA3C6039E892A154E9F2.jpg);
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.box_list{
+    width: 1200px;
+    height: 580px;
+    border: 1px solid;
+    margin: 0 auto;
+    position: relative;
+}
+.box_login{
+    width: 330px;
+    height: 300px;
+    position: absolute;
+    top: 236px;
+    right: 185px;
+    background-color: #ffffff;
+    padding: 20px;
+    z-index: 10;
+    box-shadow: 0 0 15px gray;
+}
+.box_login input{
+    width: 263px;
+    height: 42px;
+    text-indent: 1em;
+}
+.box_login label{
+    display: inline-block;
+    width: 42px;
+    height: 42px;
+    border: 1px solid #aaaaaa;
+    text-align: center;
+    color: #ffffff;
+    background-color: #cccccc;
+}
+#col{
+    color: #ffffff;
+}
+.login_inp{
+    height: 42px;
+   line-height: 42px;
+   box-sizing: border-box;
+   margin: 30px 0 20px 0;
+
+}
+
+.pas{
+    width: 15px !important;
+    height: 15px !important;
+    line-height: 15px; 
+}
+.zhuce{
+    float: right;
+}
+.zhuce a{
+    color: black;
+    margin-right: 10px;
+}
+.zhuce a:hover{
+    color: red;
+}
+.zhuce a:nth-child(1)::after{
+    content: "";
+    border-left: 2px solid #cccccc;
+    margin-left: 10px;
+}
+.login_btn{
+    width: 330px;
+    height: 42px;
+    background-color: rgb(194, 21, 21);
+    color: #ffffff;
+    border-radius: 3px;
+    box-sizing: border-box;
+    border: none;
+    margin-top: 20px;
+    opacity: 1;
+}
+.login_btn:hover{
+    opacity: .8;
+}
+.foot{
+    width: 1200px;
+    height: 132px;
+    margin: 0 auto;
+}
+.foot_box{
+    margin-top: 580px;
+    display: flex;
+}
+.fot_left {
+    width: 980px;
+    border-right: 1px solid #cccccc;
+}
+
+.fot_left li{
+    display: inline-block;
+    margin-right: 10px;
+}
+.fot_left li::after{
+    content: "";
+    border-left: 2px solid #cccccc;
+    margin-left: 10px;
+}
+#last_1::after{
+    border-left: none;
+}
+.fot_left p{
+    font-family: 微软雅黑;
+    font-size: 14px;
+    color: #aaaaaa;
+}
+.fot_fir{
+    margin: 20px 0;
+}
+.fot_fir span{
+    display: inline-block;
+    width: 88px;
+    height: 31px;
+    background-image: url(http://u.qihuiwang.com/images/login/copyright.png);
+    background-repeat: no-repeat;
+}
+.fot_fir span:nth-child(1){
+    background-position: 0 0;
+}
+.fot_fir span:nth-child(2){
+    background-position: -90px 0;
+}
+.fot_fir span:nth-child(3){
+    background-position: -180px 0;
+}
+.fot_fir span:nth-child(4){
+    background-position: -273px 0;
+}
+.fot_fir span:nth-child(5){
+    background-position: -383px 0;
+}
+.fot_fir span:nth-child(6){
+    background-position: -478px 0;
+}
+.fot_right{
+    width: 112px;
+    height: 120px;
+    margin-left: 20px;
+}
+.fot_right p{
+    line-height: 50px;
+}
+.fot_right li{
+    display: inline-block;
+    margin: 0 10px;
+}
+.fot_right li a{
+    color: #aaaaaa;
+}
+.fot_right li:hover a{
+   color: rgb(168, 18, 18);
+}
+

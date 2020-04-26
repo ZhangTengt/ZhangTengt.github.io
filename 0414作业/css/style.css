@@ -502,7 +502,10 @@ font-family: 微软雅黑;
 .d_1 input,button{
     width: 243px;
     height: 38px;
-   margin-bottom: 15px;
+    margin-bottom: 15px;
+}
+.d_1 input{
+    text-indent: 1em;
 }
 .d_1 button{
     width: 244px;
@@ -635,4 +638,5 @@ transition: all .5s;
     color: white;
     text-align: center;
 }
+
 
