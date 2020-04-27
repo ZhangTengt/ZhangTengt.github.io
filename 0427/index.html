@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+
+        html {
+            font-size: 13.33vw;
+        }
+
+        body {
+            background-color: #cccccc;
+        }
+
+        .nav {
+            width: 7.5rem;
+            height: 0.6rem;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+            background-color: #ffffff;
+        }
+
+        .nav span {
+            font-size: 0.16rem;
+            color: red;
+        }
+
+        .nav span img {
+            height: 0.1rem;
+        }
+
+        .nav input {
+            width: 4.662rem;
+            height: 0.304rem;
+            border-radius: 0.05rem;
+            background-color: #eeeeee;
+            border: 0.01rem solid #eeeeee;
+            text-indent: 1em;
+        }
+
+        .nav_right {
+            font-size: 0.14rem;
+        }
+
+        a {
+            text-decoration: none;
+            color: black;
+            font-size: 0.16rem;
+        }
+
+        .nav_right i {
+            display: inline-block;
+            width: 0.3rem;
+            height: 0.3rem;
+            background-image: url(images/1.PNG);
+            background-position: 0 0;
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+
+        .nav_right a:nth-child(2) i {
+            background-position: -0.42rem 0;
+        }
+
+        .Swiper {
+            width: 7.5rem;
+            height: 3.42rem;
+            margin: 0 auto;
+            background-color: #ffffff;
+        }
+
+        .Swiper img {
+            width: 100%;
+        }
+
+        .main {
+            width: 7.5rem;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            background-color: #ffffff;
+        }
+
+        .main_list {
+            width: 1.59rem;
+            height: 1.37rem;
+            text-align: center;
+            padding: 0 0 10px 0;
+            opacity: .5;
+        }
+
+        .main_list:hover {
+            opacity: 1;
+            cursor: pointer;
+        }
+
+        .main_list span {
+            display: inline-block;
+            width: 0.77rem;
+            height: 0.77rem;
+            border-radius: 50%;
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+
+        .main_list .sp_1 {
+            background-image: url(images/2.PNG);
+            background-position: -0.0719rem 0.02rem;
+        }
+
+        .main_list .sp_2 {
+            background-image: url(images/3.PNG);
+            background-position: -0.14rem 0.02rem;
+        }
+
+        .main_list .sp_3 {
+            background-image: url(images/4.PNG);
+            background-position: -0.14rem 0.03rem;
+        }
+
+        .main_list .sp_4 {
+            background-image: url(images/5.PNG);
+            background-position: -0.06rem 0.03rem;
+        }
+
+        .main_list h4 {
+            font-size: 0.16rem;
+        }
+
+        .cai_gou {
+            width: 7.5rem;
+            height: 2.86rem;
+            margin: 0.1rem auto;
+            background-color: #ffffff;
+            display: flex;
+        }
+
+        .cg_left img {
+            width: 3.6848rem;
+            height: 100%;
+            border-right: 0.01rem solid #eeeeee;
+        }
+
+        .cg_right img {
+            width: 3.6456rem;
+            height: 1.29rem;
+        }
+
+        .cg_right img:nth-child(1) {
+            border-bottom: 0.01rem solid #eeeeee;
+        }
+
+        .syps {
+            width: 7.5rem;
+            height: 2.3rem;
+            margin: 0.1rem auto;
+            background-color: #ffffff;
+        }
+
+        .syps img {
+            width: 100%;
+            height: 100%;
+        }
+
+        .sy_list {
+            width: 7.5rem;
+            height: 5.07rem;
+            margin: 0.1rem auto;
+        }
+
+        .sy_list img {
+            width: 100%;
+            height: 100%;
+        }
+
+        .last_list {
+            margin-bottom: 0;
+        }
+
+        .jz {
+            width: 7.5rem;
+            margin: 0 auto;
+            text-align: center;
+            padding: 0.2rem 0;
+        }
+
+        .jz p {
+            font-size: 0.2rem;
+            color: #535252;
+        }
+
+        .foot_tab {
+            width: 7.5rem;
+            height: 0.73rem;
+            margin: 0 auto;
+            background-color: #ffffff;
+        }
+
+        .foot_tab ul {
+            list-style: none;
+            font-size: 0.14rem;
+            display: flex;
+            justify-content: space-around;
+        }
+
+        .foot_tab li {
+            text-align: center;
+            font-size: 0.14rem;
+            width: 0.6rem;
+            height: 0.73rem;
+        }
+
+        .foot_tab li a {
+            color: #aaaaaa;
+        }
+
+        .foot_tab li img {
+            width: 0.5rem;
+            opacity: .5;
+        }
+
+        .foot_tab li:hover a,
+        .foot_tab li:hover img {
+            color: red;
+            opacity: 1;
+        }
+
+        #back {
+            width: 0.54rem;
+            height: 0.5rem;
+            border-radius: 50%;
+            font-size: 0.14rem;
+            overflow: hidden;
+            position: fixed;
+            bottom: 85px;
+            right: 0;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="nav">
+        <a href="#"><span>郑州<img src="images/jt.PNG" alt=""></span></a>
+        <input type="text" placeholder="搜索商品、套餐、话题">
+        <div class="nav_right">
+            <a href="#"><i></i></a>
+            <a href="#"><i></i></a>
+        </div>
+    </div>
+    <div class="Swiper">
+        <img src="images/lunbo.PNG" alt="">
+    </div>
+    <div class="main">
+        <div class="main_list">
+            <span class="sp_1"></span>
+            <h4>找商家</h4>
+        </div>
+        <div class="main_list">
+            <span class="sp_2"></span>
+            <h4>备婚清单</h4>
+        </div>
+        <div class="main_list">
+            <span class="sp_3"></span>
+            <h4>电子请帖</h4>
+        </div>
+        <div class="main_list">
+            <span class="sp_4"></span>
+            <h4>结婚任务</h4>
+        </div>
+    </div>
+    <div class="cai_gou">
+        <div class="cg_left"><a href="#"><img src="images/6.PNG" alt=""></a></div>
+        <div class="cg_right">
+            <a href="#"> <img src="images/7.PNG" alt=""></a>
+            <a href="#"> <img src="images/8.PNG" alt=""></a>
+        </div>
+    </div>
+    <!-- 三亚拍摄syps -->
+    <div class="syps">
+        <a href="#"><img src="images/9.PNG" alt=""></a>
+    </div>
+    <div class="sy_list">
+        <a href="#"><img src="images/11.PNG" alt=""></a>
+    </div>
+    <div class="sy_list">
+        <a href="#"><img src="images/12.PNG" alt=""></a>
+    </div>
+    <div class="sy_list last_list">
+        <a href="#"><img src="images/13.PNG" alt=""></a>
+    </div>
+    <div class="jz">
+        <p>正在加载...</p>
+    </div>
+    <div class="foot_tab">
+        <ul>
+            <li>
+                <a href="#"><img src="images/14.PNG" alt="">首页</a>
+            </li>
+            <li>
+                <a href="#"><img src="images/15.PNG" alt="">分类</a>
+            </li>
+            <li>
+                <a href="#"><img src="images/16.PNG" alt="">新娘说</a>
+            </li>
+            <li>
+                <a href="#"><img src="images/17.PNG" alt="">工具</a>
+            </li>
+            <li>
+                <a href="#"><img src="images/18.PNG" alt="">我的</a>
+            </li>
+        </ul>
+    </div>
+    <img id="back" src="images/19.PNG" alt="">
+</body>
+<script>
+    back.onclick = function () {
+        function handleScrollTop() {
+            window.scrollTo(0, 0);
+        }
+        handleScrollTop()
+    }
+</script>
+
+</html>
