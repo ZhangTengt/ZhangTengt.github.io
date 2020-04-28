@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <script src="iscroll.Veb.js"></script>
     <style>
         * {
             padding: 0;
@@ -71,15 +72,39 @@
             background-position: -0.42rem 0;
         }
 
-        .Swiper {
+        #swi {
             width: 7.5rem;
-            height: 3.42rem;
+            height: 2.55rem;
             margin: 0 auto;
+            position: relative;
+        }
+
+        #swi ul {
+            list-style: none;
+            position: absolute;
+            top: 2.2rem;
+            left: 3.5rem;
+            font-size: 0.14rem;
+        }
+
+        #swi li {
+            display: inline-block;
+            width: 0.1rem;
+            height: 0.1rem;
+            border: 0.01rem solid red;
+            border-radius: 50%;
+        }
+
+        .Swiper {
+            width: 45rem;
+            height: 2.55rem;
             background-color: #ffffff;
+            display: flex;
         }
 
         .Swiper img {
-            width: 100%;
+            width: 7.5rem;
+            padding: 0;
         }
 
         .main {
@@ -261,8 +286,21 @@
             <a href="#"><i></i></a>
         </div>
     </div>
-    <div class="Swiper">
-        <img src="images/lunbo.PNG" alt="">
+    <div id="swi">
+        <div class="Swiper">
+            <img src="https://i.dxlfile.com/adm/material/2020_01_06/20200106103307797647.png" alt="">
+            <img src="https://i.dxlfile.com/adm/material/2020_04_14/20200414133433212149.jpg" alt="">
+            <img src="https://i.dxlfile.com/adm/material/2020_03_30/20200330211435309869.png" alt="">
+            <img src="https://i.dxlfile.com/adm/material/2020_02_11/20200211190402283863.jpg" alt="">
+            <img src="https://i.dxlfile.com/adm/material/2020_01_06/20200106103307797647.png" alt="">
+            <img src="https://i.dxlfile.com/adm/material/2020_04_14/20200414133433212149.jpg" alt="">
+        </div>
+        <ul id="small">
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+        </ul>
     </div>
     <div class="main">
         <div class="main_list">
@@ -327,6 +365,31 @@
     <span id="back">顶部</span>
 </body>
 <script>
+    var list = small.children
+    list[0].style.backgroundColor = "red"
+    var isc = new iScroll("swi", {
+        snap: true,
+        momentum: false,
+        hScrollbar: false,
+        snapThreshold: 50,
+
+        onScrollEnd: function () {
+            if (this.currPageX == 5) {
+                this.scrollToPage(1, 0, 0)
+            }
+            if (this.currPageX == 0) {
+                this.scrollToPage(4, 0, 0)
+            }
+            list[this.currPageX - 1].style.backgroundColor = "red"
+        },
+        onScrollStart: function () {
+            console.log(this.currPageX);
+            // list[this.currPageX].style.backgroundColor = ""
+        }
+
+    })
+    isc.scrollToPage(1, 0, 0);
+    
     back.onclick = function () {
         function handleScrollTop() {
             window.scrollTo(0, 0);
