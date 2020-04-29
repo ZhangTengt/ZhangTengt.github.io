@@ -365,6 +365,8 @@
     <span id="back">顶部</span>
 </body>
 <script>
+
+    var x = 0;
     var list = small.children
     list[0].style.backgroundColor = "red"
     var isc = new iScroll("swi", {
@@ -380,16 +382,15 @@
             if (this.currPageX == 0) {
                 this.scrollToPage(4, 0, 0)
             }
-            list[this.currPageX - 1].style.backgroundColor = "red"
-        },
-        onScrollStart: function () {
-            console.log(this.currPageX);
-            // list[this.currPageX].style.backgroundColor = ""
-        }
 
+            list[x].style.backgroundColor = ""
+            list[this.currPageX - 1].style.backgroundColor = "red"
+            x = this.currPageX - 1
+
+        }
     })
     isc.scrollToPage(1, 0, 0);
-    
+
     back.onclick = function () {
         function handleScrollTop() {
             window.scrollTo(0, 0);
