@@ -12,14 +12,6 @@ function f(index) {
     })
 }
 f();
-// for (let i = 0; i < $(".search_list").length; i++) {
-//     console.log(i);
-//     $(".search_list")[i].index = i;
-//     $(".search_list").click(function () {
-//         var value = $(".search_list a")[this.index].text
-//        $(".search").text = value   
-//     })
-// }
 
 
 function banner() {
@@ -59,25 +51,82 @@ function tab() {
     $(".g_2").eq(index).css("display", "block")
 
     $(".g_1 a").each(function (i, obj) {
+        $(".g_1 a").eq(i).index = i
         $(".g_1 a").eq(i).mouseover(function () {
-            $(".g_2").eq(index).css("display", "none")
-            $(".g_1 a").eq(index).removeClass("g_1_bg")
+
+            $(".g_2").each(function (j, obj) {
+                $(".g_1 a").eq(j).removeClass("g_1_bg")
+                $(".g_2").eq(j).css("display", "none")
+            })
+
             $(".g_1 a").eq(i).addClass("g_1_bg")
             $(".g_2").eq(i).css("display", "block")
-            x = i
-        })
-        $(".g_1 a").eq(i).mouseout(function () {
-            $(".g_1 a").eq(x).removeClass("g_1_bg")
-            $(".g_2").eq(x).css("display", "none")
-            //     setTimeout(() => {
-            //     $(".g_1 a").eq(x).addClass("g_1_bg")
-            //     $(".g_2").eq(x).css("display", "block")
-            // }, 1000);
         })
     })
+}
+tab();
+
+
+function lunbo() {
+    var x = 0
+    $("#sub span").eq(0).css("backgroundColor", "red")
+    setInterval(() => {
+        for (let i = 0; i < $("#sub span").length; i++) {
+            $("#sub span").css("backgroundColor", "")
+        }
+        x++
+        if (x > 3) {
+            x = 0
+        }
+        $("#sub span").eq(x).css("backgroundColor", "red")
+        $("#lf_sl").css("left", -x * 344 + "px")
+    }, 5000)
+    for (let i = 0; i < $("#sub span").length; i++) {
+        $("#sub span").mouseover(function () {
+            for (let j = 0; j < $("#sub span").length; j++) {
+                $("#sub span").css("backgroundColor", "")
+            }
+            $(this).css("backgroundColor", "red")
+            $("#lf_sl").css("left", $(this).index() * -344 + "px")
+        })
+    }
+}
+lunbo();
+
+
+function scroll_auto() {
+    for (let i = 0; i < $(".left_tab li").length; i++) {
+        $(".left_tab li").eq(i).click(function () {
+            var ot = $(".o_t").eq($(this).index() - 1).offset().top
+            console.log(ot);
+
+            if (ot < 890) {
+                $(".left_tab").css("display", "none")
+            } else {
+                document.body.scrollTop = ot - 80
+                document.documentElement.scrollTop = ot - 80
+            }
+
+        })
+    }
 
 }
-tab()
+scroll_auto();
 
-
+function backBtn() {
+    $(".back").click(function () {
+        window.scrollTo(0, 0)
+    })
+    $(".back").mouseover(function () {
+        $("#backText").css("left", "-67px")
+        $(".back").css({ "backgroundColor": "#e02445", "color": "#ffffff" })
+        $("#backText").css({ "backgroundColor": "#e02445", "color": "#ffffff" })
+    })
+    $(".back").mouseout(function () {
+        $("#backText").css("left", "39px")
+        $(".back").css({ "backgroundColor": "#eee", "color": "black" })
+        $("#backText").css({ "backgroundColor": "#eee", "color": "black" })
+    })
+}
+backBtn()
 
